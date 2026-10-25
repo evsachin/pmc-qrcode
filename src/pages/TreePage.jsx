@@ -32,7 +32,27 @@ export default function TreePage() {
     : null;
 
   const treeUrl = window.location.href;
+
   const localName = tree.localName || tree.commonName;
+
+  // Concept contributors displayed at the bottom of each tree page.
+  const conceptBy = [
+    {
+      name: "Sau. Nisha Sachin Manvatkar",
+      roles: [
+        "Municipal Councillor, Pune Municipal Corporation",
+        "Standing Committee Member, Pune Municipal Corporation",
+      ],
+      image: "/images/leaders/nisha.jpg",
+      alt: "Sau. Nisha Sachin Manvatkar",
+    },
+    {
+      name: "Shri. Sachinbhau Manvatkar",
+      roles: ["Social Worker"],
+      image: "/images/leaders/sachin.jpg",
+      alt: "Shri. Sachinbhau Manvatkar",
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-[#e9eee1] px-0 py-0 sm:px-4 sm:py-5">
@@ -109,9 +129,13 @@ export default function TreePage() {
 
                 <ul className="list-disc space-y-1 pl-5 text-[14px] leading-[1.5] text-[#263d30]">
                   <li>Common Name: {tree.commonName}</li>
+
                   <li>Scientific Name: {tree.scientificName}</li>
+
                   <li>Family: {tree.family}</li>
+
                   <li>Approximate Age: {tree.age}</li>
+
                   <li>Height: {tree.height}</li>
                 </ul>
               </div>
@@ -286,32 +310,40 @@ export default function TreePage() {
         <footer className="relative mt-8 overflow-hidden px-5 pb-8 pt-8 text-center">
           <div className="absolute bottom-2 left-[-20px] right-[-20px] h-[20px] rotate-[-3deg] bg-[#128447] opacity-80" />
 
-          <div className="relative z-10">
-            {organization?.name && (
-              <>
-                <div className="text-[16px] font-semibold text-[#3e684d]">
-                  Concept by
+        {/* Concept by: profiles only; no additional organization/project details */}
+        <section className="border-t border-[#d5e9bf] px-5 py-7 text-center sm:px-8 sm:py-8">
+          <p className="mb-4 text-md font-bold tracking-wide text-[#276340]">
+            Concept by
+          </p>
+
+          <div className="mx-auto grid max-w-[620px] grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
+            {conceptBy.map((person) => (
+              <div key={person.name} className="flex flex-col items-center">
+                <div className="h-[150px] w-[150px] overflow-hidden rounded-xl border-2 border-[#d5e9bf] bg-white shadow-sm sm:h-[170px] sm:w-[170px]">
+                  <img
+                    src={person.image}
+                    alt={person.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-
-                <div className="mt-1 text-[25px] font-black text-[#126238]">
-                  {organization.name}
-                </div>
-              </>
-            )}
-
-            {organization?.initiativeName && (
-              <div className="mt-1 text-[16px] font-semibold text-[#3e684d]">
-                ({organization.initiativeName})
+                <h3 className="mt-3 text-base font-black leading-snug text-[#145b35]">
+                  {person.name}
+                </h3>
+                {person.roles.map((role) => (
+                  <p
+                    key={role}
+                    className="mt-1 max-w-[300px] text-sm leading-snug text-[#3e684d]"
+                  >
+                    {role}
+                  </p>
+                ))}
               </div>
-            )}
-
-            {organization?.projectName && (
-              <div className="mx-auto mt-3 inline-block rounded-sm bg-[#128447] px-6 py-2 text-sm font-black uppercase tracking-wide text-white">
-                {organization.projectName}
-              </div>
-            )}
+            ))}
           </div>
+        </section>
         </footer>
+
       </article>
     </main>
   );

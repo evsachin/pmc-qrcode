@@ -13,8 +13,8 @@ export const trees = [
     //MAYOR  •  SHRI RAVI LANDGE
 
     // Organization / Project Details
-    organization: {
-      name: "MAYOR- SHRI RAVI LANDGE",
+   organization: {
+      name: "Mrs. Nisha Sachin Manwatkar",
       initiativeName: "Bharatiya Janata Party (BJP)",
       projectName: "OXYGEN PARK PROJECT",
       totalTrees: 800,
@@ -70,7 +70,7 @@ export const trees = [
 
     // Different organization for this tree
    organization: {
-      name: "Mrs. Nisha Sachin Manvatkar",
+      name: "Mrs. Nisha Sachin Manwatkar",
       initiativeName: "Bharatiya Janata Party (BJP)",
       projectName: "OXYGEN PARK PROJECT",
       totalTrees: 800,
@@ -125,7 +125,7 @@ export const trees = [
 
     // Another organization
      organization: {
-      name: "MAYOR- SHRI RAVI LANDGE",
+      name: "Mrs. Nisha Sachin Manwatkar",
       initiativeName: "Bharatiya Janata Party (BJP)",
       projectName: "OXYGEN PARK PROJECT",
       totalTrees: 800,
@@ -178,11 +178,11 @@ export const trees = [
     treeNumber: "128",
     slug: "mango-tree",
 
-    organization: {
-      name: "Green Earth Foundation",
-      initiativeName: "TREE FOR TOMORROW",
+   organization: {
+      name: "Mrs. Nisha Sachin Manwatkar",
+      initiativeName: "Bharatiya Janata Party (BJP)",
       projectName: "OXYGEN PARK PROJECT",
-      totalTrees: 1000,
+      totalTrees: 800,
     },
 
     commonName: "Mango Tree",
@@ -232,11 +232,11 @@ export const trees = [
     treeNumber: "129",
     slug: "ashoka-tree",
 
-    organization: {
-      name: "Pune Green Initiative",
-      initiativeName: "CSR GREEN PROJECT",
-      projectName: "CITY OXYGEN PROJECT",
-      totalTrees: 650,
+   organization: {
+      name: "Mrs. Nisha Sachin Manwatkar",
+      initiativeName: "Bharatiya Janata Party (BJP)",
+      projectName: "OXYGEN PARK PROJECT",
+      totalTrees: 800,
     },
 
     commonName: "Ashoka Tree",

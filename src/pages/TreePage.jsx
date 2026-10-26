@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { QRCodeCanvas } from "qrcode.react";
 import { getTreeBySlug } from "../data/trees.js";
 import NotFound from "./NotFound.jsx";
+import nishaaImage from "/images/leaders/nishaa.webp";
 
 export default function TreePage() {
   const { slug } = useParams();
@@ -321,33 +322,15 @@ export default function TreePage() {
                 People behind the green vision
               </h2>
             </div>
-            <div className="grid grid-cols-2 gap-3 sm:gap-6">
-              {conceptBy.map((person) => (
-                <div
-                  key={person.name}
-                  className="flex min-w-0 flex-col items-center rounded-2xl border border-[#d5e6c3] bg-white/85 p-3 text-center shadow-[0_5px_18px_rgba(39,89,45,0.06)] sm:p-5"
-                >
-                  <div className="h-24 w-24 overflow-hidden rounded-xl border-2 border-[#d5e9bf] bg-[#edf4e5] shadow-sm sm:h-36 sm:w-36">
-                    <img
-                      src={person.image}
-                      alt={person.alt}
-                      loading="lazy"
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  <h3 className="mt-3 text-xs font-black leading-snug text-[#145b35] sm:text-base">
-                    {person.name}
-                  </h3>
-                  {person.roles.map((role) => (
-                    <p
-                      key={role}
-                      className="mt-1 max-w-[300px] text-[10px] leading-snug text-[#52715b] sm:text-sm"
-                    >
-                      {role}
-                    </p>
-                  ))}
-                </div>
-              ))}
+            <div className="flex justify-center">
+              <div className="w-full max-w-[520px] overflow-hidden rounded-2xl border border-[#d5e6c3] bg-white p-2 shadow-md">
+                <img
+                  src={nishaaImage}
+                  alt="Concept by"
+                  loading="lazy"
+                  className="block h-auto w-full rounded-xl object-cover"
+                />
+              </div>
             </div>
           </div>
           <div className="relative mt-7 flex items-center justify-center gap-2 border-t border-[#cfe1bd] pt-4 text-center text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#4f7650] sm:text-xs">
